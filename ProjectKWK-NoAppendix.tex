@@ -37,12 +37,12 @@
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{October 14, 2021}\date{\forcedate}
+\renewcommand{\forcedate}{\today}\date{\forcedate}
 
 \maketitle
 \hypertarget{abstract}{}
 \begin{abstract}
-This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towards financial deregulation by US legislators. I measure the effect of close elections on US legislators on switching their votes towards financial deregulation in Congress bills. I aim to distinguish between votd switches towards financial deregulation because of voters' general interests (especially after the Global Financial Crisis of 2007) versus the financial industry's special interests and the industry's campaign contributions and lobbying expenditures towards legislators in close elections.
+This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towards financial deregulation by US legislators. I measure the effect of close elections on US legislators on switching their votes towards financial deregulation in Congress bills. I aim to distinguish between vote switches towards financial deregulation because of voters' general interests (especially after the Global Financial Crisis of 2007) versus the financial industry's special interests in the form of campaign contributions and lobbying expenditures towards legislators in close elections.
 \end{abstract}
 
 
@@ -86,8 +86,8 @@ This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towar
 \begin{center}
 \begin{figure}
 \begin{tikzpicture}[auto, thick]
-    \node (GeneralInterests) at (-3,3) [rectangle,draw=blue!50,fill=red!20,text width=2.5cm,text badly centered,label={[align=center]above:Voters}] {Public Scrutiny};
-    \node (SpecialInterests) at (3,3)[rectangle,draw=blue!50,fill=green!20,text width=4cm,text badly centered,label={[align=center]above:Financial Industry}] {Lobbying Expenditures, Campaign Contributions};
+    \node (GeneralInterests) at (-4,3) [rectangle,draw=blue!50,fill=red!20,text width=2.5cm,text badly centered,label={[align=center]above:Voters}] {Public Scrutiny};
+    \node (SpecialInterests) at (4,3)[rectangle,draw=blue!50,fill=green!20,text width=4cm,text badly centered,label={[align=center]above:Financial Industry}] {Lobbying Expenditures, Campaign Contributions};
     \node (ElectionCloseness) at (0,0) [rectangle,draw=blue!50,fill=blue!20,text width = 3.5cm, text badly centered]{Election Closeness (Margin of Victory)};
     \node (VoteSwitch) at (0,-3) [rectangle,draw=blue!50,fill=black!20,text width = 3cm, text badly centered,label={[align=center]below:Legislators}] {Vote Switch towards Financial Deregulation};
     \draw [->] (ElectionCloseness.south) -- (VoteSwitch.north);
@@ -100,8 +100,6 @@ This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towar
 
 Sample Text for ProjectKWK: Lorem Ipsum et cetera. Try citing Igan and Mishra (2014) ~\cite{IM14}.
 
-
-The paper begins by defining sufficient conditions for the problem to define a useful (nondegenerate) limiting consumption function (and explains how the model relates to those previously considered).  The conditions are interestingly parallel to those required for the \hyperlink{Factors-Defined-And-Compared}{liquidity constrained perfect foresight model}; that parallel is explored and explained.  This analysis establishes limiting properties of the consumption function as resources approach infinity, and as they approach their lower bound; using these limits, the contraction mapping theorem is proven.
 
 The next theoretical contribution demonstrates that a corresponding model with an `artificial' liquidity constraint (a model that prohibits borrowing by consumers who could certainly repay) is a limiting case of the model without constraints. The analytical appeal of the unconstrained model is that it is both mathematically convenient (e.g., the consumption function is twice continuously differentiable), and arbitraily close (cf.\ Section~\ref{sec:deatonIsLimit}) to less tractable models. The congenial environment makes the proof easier, and we define the analogous proposition as holding (in the limit) if it continues to hold as the horizon extends to infinity.
 

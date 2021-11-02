@@ -409,3 +409,6 @@
 \DeclareOldFontCommand{\sl}{\normalfont\slshape}{\@nomath\sl}
 \DeclareOldFontCommand{\sc}{\normalfont\scshape}{\@nomath\sc}
 \makeatother
+
+% Add default link for html material at github llorracc
+\newcommand{\llorraccio}[1]{\href{https://llorracc.github.io/#1}{\texttt{#1}}}

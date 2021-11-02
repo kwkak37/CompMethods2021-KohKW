@@ -37,10 +37,11 @@
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
+\renewcommand{\forcedate}{November 2, 2021}\date{\forcedate}
 \maketitle
 \hypertarget{abstract}{}
 \begin{abstract}
-This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towards financial deregulation by US legislators. I measure the effect of close elections on US legislators on switching their votes towards financial deregulation in Congress bills. I aim to distinguish between vote switches towards financial deregulation because of voters' general interests (especially after the Global Financial Crisis of 2007) versus the financial industry's special interests in the form of campaign contributions and lobbying expenditures towards legislators in close elections.
+This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towards financial deregulation by US legislators. I measure the effect of close elections on US legislators on switching their votes towards financial deregulation in Congress bills. I aim to distinguish between votd switches towards financial deregulation because of voters' general interests (especially after the Global Financial Crisis of 2007) versus the financial industry's special interests and the industry's campaign contributions and lobbying expenditures towards legislators in close elections.
 \end{abstract}
 
 
@@ -81,6 +82,11 @@ This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towar
 
 How do legislators in close elections vote differently on financial deregulation compared to legislators in sure elections? I use data from \cite{IM14} to answer this question.
 
+
+\hypertarget{The-Problem}{}
+
+\section{The Problem}
+
 Legislators, to get reelected, have to respond to voters and special interests (in this paper, the financial industry)
 
 Legislators in sure elections are less incentivized to switch their vote on bills on financial deregulation; they will still win their sure elections whether they vote for (if the legislator's constituent voters prefer deregulation) or against (if the legislator's constituent voters do not prefer deregulation). Legislators in sure elections are also less incentivized to switch their votes towards financial deregulation to satisfy the financial industry, as they will still have enough campaign finances to win their sure elections regardless of the additional campaign contributions from the financial industry. In short, legislators in sure elections would not be strongly incentivized to switch their votes on financial deregulation to get more votes or acquire more campaign contributions. Legislators in sure elections will be less responsive to additional lobbying expenditures or campaign contributions by the financial industry as well.
@@ -93,6 +99,11 @@ There are two broad strategies that can be used; the first is to use a measure o
 
 The second is to use the rapid change in public sentiment against financial deregulation shortly after the Global Financial Crisis and the resulting Great Recession.
 
+
+
+
+
+\subsection{Setup}\label{subsec:Setup}
 
 
 
@@ -134,24 +145,6 @@ Concretely, I write Regression A1 as:
   \end{align*}
 \end{verbatimwrite}
 \input{\LtxDir\EqDir/regA1}
-
-where the Constant Relative Risk Aversion (CRRA) utility function
-\begin{align}
-  \uFunc(\bullet)=\bullet^{1-\CRRA}/(1-\CRRA) \label{eq:crrautil}
-\end{align}
-exhibits relative risk aversion $\CRRA > 1$.\footnote{The main
-  results also hold for logarithmic utility which is the limit as
-  $\CRRA \rightarrow 1$ but incorporating the logarithmic special case
-  in the proofs is omitted because it would be cumbersome.}  The consumer's initial condition is
-defined by market resources $\mLevBF_{t}$ and permanent noncapital income $\pLevBF_{t}$, which
-both are positive,
-\begin{align}
-  \{\pLevBF_{t},\mLevBF_{t}\} & \in (0,\infty) \label{eq:pLevBFandmLevBFgt0},
-\end{align}
-and the consumer cannot die in debt,
-\begin{align}
-  \cLevBF_{T} & \leq  \mLevBF_{T} \label{eq:NoDebtAtDeath}.
-\end{align}
 
 
 \hypertarget{Conclusions}{}

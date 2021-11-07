@@ -37,11 +37,11 @@
   \href{https://econ-ark.org}{\includegraphics{\ResourcesDir/PoweredByEconARK}}
 }
 
-\renewcommand{\forcedate}{November 2, 2021}\date{\forcedate}
+\renewcommand{\forcedate}{November 9, 2021}\date{\forcedate}
 \maketitle
 \hypertarget{abstract}{}
 \begin{abstract}
-This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towards financial deregulation by US legislators. I measure the effect of close elections on US legislators on switching their votes towards financial deregulation in Congress bills. I aim to distinguish between votd switches towards financial deregulation because of voters' general interests (especially after the Global Financial Crisis of 2007) versus the financial industry's special interests and the industry's campaign contributions and lobbying expenditures towards legislators in close elections.
+This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towards financial deregulation by US legislators. I measure the effect of close elections on US legislators on switching their votes towards financial deregulation in Congress bills. I aim to distinguish between vote switches towards financial deregulation because of voters' general interests (especially after the Global Financial Crisis of 2007) versus the financial industry's special interests and the industry's campaign contributions and lobbying expenditures towards legislators in close elections.
 \end{abstract}
 
 
@@ -50,7 +50,7 @@ This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towar
 \end{authorsinfo}
 
 \newcommand{\thankstext}{
-  The paper is the author's 2nd year paper for fulfillment to the PhD in Economics program at Johns Hopkins University, and also for Professor Christpher Carroll's Computational Methods course. I thank Professors Laurence Ball and Filipe Campante for comments and advice, and Deniz Igan and Prachi MIshra for sharing their data.}
+  The paper is the author's 2nd year paper for fulfillment to the PhD in Economics program at Johns Hopkins University, and also for Professor Christpher Carroll's Computational Methods course. I thank Professors Laurence Ball and Filipe Campante for comments and advice, and Deniz Igan and Prachi Mishra for sharing their data.}
 
 \ifthenelse{\boolean{Web}}{}{
   \begin{minipage}{0.9\textwidth}
@@ -63,22 +63,8 @@ This paper builds upon Igan and Mishra (2014) \cite{IM14} on vote switches towar
 \section{Introduction}\label{sec:intro}
 
 
+\input{\FigDir/KohFigure1}
 
-\begin{center}
-\begin{figure}
-\begin{tikzpicture}[auto, thick]
-    \node (SpecialInterests) at (-4,4)[rectangle,draw=black!50,fill=green!20,text width=4.5cm,text badly centered,label={[align=center]above:Financial Industry}] {Lobbying Expenditures, Campaign Contributions};
-    \node (GeneralInterests) at (4,4) [rectangle,draw=black!50,fill=red!20,text width=2.5cm,text badly centered,label={[align=center]above:Voters}] {Public Scrutiny};
-    \node (ElectionCloseness) at (0,0) [rectangle,draw=black!50,fill=blue!20,text width = 4cm, text badly centered]{Election Closeness (Margin of Victory)};
-    \node (VoteSwitch) at (0,-2) [rectangle,draw=black!50,fill=black!20,text width = 5cm, text badly centered,label={[align=center]below:Legislators}] {Vote Switch towards Financial Deregulation};
-    \draw [->] (ElectionCloseness.south) -- (VoteSwitch.north);
-    \draw [->] (GeneralInterests.south) -- node[midway,sloped,above] {\textcolor{blue}{+(pre-GFC)}} node[midway,sloped,below] {\textcolor{red}{-(post-GFC)}} (ElectionCloseness.north);
-    \draw [->] (SpecialInterests.south) --node[midway,sloped,above]{\textcolor{blue}{+ (More likely}} node[midway,sloped,below]{\textcolor{blue}{to switch vote)}} (ElectionCloseness.north);
-\end{tikzpicture}
-\centering
-    \caption{Two Channels in which Legislators in Close Elections Switch their Votes Toward Financial Deregulation}\label{KohFigure1}
-\end{figure}
-\end{center}
 
 How do legislators in close elections vote differently on financial deregulation compared to legislators in sure elections? I use data from \cite{IM14} to answer this question.
 
@@ -115,6 +101,8 @@ The second is to use the rapid change in public sentiment against financial dere
 
 \subsection{Dependent Variable}\label{subsec:DependentVariable}
 
+\input{\TableDir/DepVar}
+
 \subsection{Election Closeness}\label{subsec:ElectionCloseness}
 
 Compared to the original \cite{IM14} paper, I add the new variable of ``Election Closeness'' as the main focus of this paper. I define ``election closeness'' for each legislator $i$ and bill $BR$, denoted as $X_{iBR}$, as the degree to which the legislator has faced (past) or will face (future) a close election. Note the two possible ways of looking at election closeness: through the past election(s) of the legislator, or to the (immediately next) future election of the legislator. Meanwhile, the measure of future election closeness
@@ -138,12 +126,6 @@ Ideally, future election closeness may be defined as the expected margin of vict
 
 Concretely, I write Regression A1 as:
 
-\begin{verbatimwrite}{\EqDir/regA1}
-  \begin{align*}%    \label{eq:regA1}
-    S_{iBR} &= \beta_{1} L_{BR} + \beta_{2} X_{iBR}^{P} + \beta_{3} (L_{BR} \times X_{iBR}^{P} ) \nonumber \\
-    &+ \alpha F_{BR} + \gamma T_{BR}+ s_{i} \times t_{c}+ v_{B} \times t_{c}+\mu_{R} \times t_{c}+\varepsilon_{iBR} \label{eq:regA1}
-  \end{align*}
-\end{verbatimwrite}
 \input{\LtxDir\EqDir/regA1}
 
 

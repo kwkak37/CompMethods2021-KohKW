@@ -1,0 +1,13 @@
+\newsavebox{\DepVar}
+\begin{table}
+\centering
+\caption{Definition of the Main Dependent Variable, Vote Switch towards Deregulation}\label{table:DepVar}
+\sbox{\DepVar}{
+\begin{tabular}{p{0.25\linewidth} | p{0.25\linewidth} | p{0.25\linewidth}} \hline
+\textbf{Value of $S_iBR$}  & Voted for deregulation in Bill $B,R$ & Voted against deregulation in Bill $B,R$ \\ \hline
+Voted for deregulation in Bill $B,R-1$ & 0 & 0 \\ \hline
+Voted for deregulation in Bill $B,R-1$ & 1 & 0 \\ \hline
+\end{tabular}
+}
+\usebox{\DepVar}
+\end{table}

@@ -1,0 +1,7 @@
+    \node (SpecialInterests) at (-4,4)[rectangle,draw=black!50,fill=green!20,text width=4.5cm,text badly centered,label={[align=center]above:Financial Industry}] {Lobbying Expenditures, Campaign Contributions};
+    \node (GeneralInterests) at (4,4) [rectangle,draw=black!50,fill=red!20,text width=2.5cm,text badly centered,label={[align=center]above:Voters}] {Public Scrutiny};
+    \node (ElectionCloseness) at (0,0) [rectangle,draw=black!50,fill=blue!20,text width = 4cm, text badly centered]{Election Closeness (Margin of Victory)};
+    \node (VoteSwitch) at (0,-2) [rectangle,draw=black!50,fill=black!20,text width = 5cm, text badly centered,label={[align=center]below:Legislators}] {Vote Switch towards Financial Deregulation};
+    \draw [->] (ElectionCloseness.south) -- (VoteSwitch.north);
+    \draw [->] (GeneralInterests.south) -- node[midway,sloped,above] {\textcolor{blue}{+(pre-GFC)}} node[midway,sloped,below] {\textcolor{red}{-(post-GFC)}} (ElectionCloseness.north);
+    \draw [->] (SpecialInterests.south) --node[midway,sloped,above]{\textcolor{blue}{+ (More likely}} node[midway,sloped,below]{\textcolor{blue}{to switch vote)}} (ElectionCloseness.north);

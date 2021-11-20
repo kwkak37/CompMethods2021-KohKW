@@ -1,0 +1,39 @@
+\begin{center}
+\begin{tabular}{lclc}
+\toprule
+\textbf{Dep. Variable:}           &      sw\_p       & \textbf{  R-squared:         } &     0.040   \\
+\textbf{Model:}                   &       OLS        & \textbf{  Adj. R-squared:    } &     0.039   \\
+\textbf{Method:}                  &  Least Squares   & \textbf{  F-statistic:       } &     26.96   \\
+\textbf{Date:}                    & Sat, 20 Nov 2021 & \textbf{  Prob (F-statistic):} &  8.41e-27   \\
+\textbf{Time:}                    &     11:15:12     & \textbf{  Log-Likelihood:    } &   -1858.9   \\
+\textbf{No. Observations:}        &        3220      & \textbf{  AIC:               } &     3730.   \\
+\textbf{Df Residuals:}            &        3214      & \textbf{  BIC:               } &     3766.   \\
+\textbf{Df Model:}                &           5      & \textbf{                     } &             \\
+\textbf{Covariance Type:}         &    nonrobust     & \textbf{                     } &             \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lcccccc}
+                                  & \textbf{coef} & \textbf{std err} & \textbf{t} & \textbf{P$> |$t$|$} & \textbf{[0.025} & \textbf{0.975]}  \\
+\midrule
+\textbf{Intercept}                &      -0.2308  &        0.181     &    -1.273  &         0.203        &       -0.586    &        0.125     \\
+\textbf{log\_contributions\_FIRE} &       0.0612  &        0.015     &     4.064  &         0.000        &        0.032    &        0.091     \\
+\textbf{mov\_past}                &       0.0082  &        0.004     &     2.278  &         0.023        &        0.001    &        0.015     \\
+\textbf{mov\_contr\_int}          &      -0.0007  &        0.000     &    -2.357  &         0.019        &       -0.001    &       -0.000     \\
+\textbf{bill\_complexity}         &      -0.0404  &        0.006     &    -6.528  &         0.000        &       -0.053    &       -0.028     \\
+\textbf{tight}                    &      -0.3275  &        0.035     &    -9.362  &         0.000        &       -0.396    &       -0.259     \\
+\bottomrule
+\end{tabular}
+\begin{tabular}{lclc}
+\textbf{Omnibus:}       & 721.842 & \textbf{  Durbin-Watson:     } &     2.179  \\
+\textbf{Prob(Omnibus):} &   0.000 & \textbf{  Jarque-Bera (JB):  } &   626.903  \\
+\textbf{Skew:}          &   0.994 & \textbf{  Prob(JB):          } & 7.41e-137  \\
+\textbf{Kurtosis:}      &   2.150 & \textbf{  Cond. No.          } &  1.31e+04  \\
+\bottomrule
+\end{tabular}
+%\caption{OLS Regression Results}
+\end{center}
+
+Notes: \newline
+ [1] Standard Errors assume that the covariance matrix of the errors is correctly specified. \newline
+ [2] The condition number is large, 1.31e+04. This might indicate that there are \newline
+ strong multicollinearity or other numerical problems.

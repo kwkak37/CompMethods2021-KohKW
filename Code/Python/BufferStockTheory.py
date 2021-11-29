@@ -73,20 +73,22 @@ warnings.filterwarnings("ignore")
 import pandas as pd
 import statsmodels.discrete.discrete_model as smdm
 import statsmodels.api as sm
+from linearmodels.iv import IV2SLS
 import numpy as np
 from patsy import dmatrices
 import os
 filepath = os.path.abspath(os.getcwd())
 filepathmain = os.path.dirname(os.path.dirname(filepath))
 
-
 OwnData = pd.read_csv("RegA2.csv")
 OwnData = OwnData.dropna(subset = ['sw_p', 'mov_past'])
+OwnData = OwnData[OwnData.reinc != 1]
 
 y, X = dmatrices('sw_p ~ log_contributions_FIRE + bill_complexity + tight', data=OwnData, return_type='dataframe')
 OLSmodel = sm.OLS(y,X)
 results_0 = OLSmodel.fit()
 results_0.summary()
+
 
 OwnData['mov_contr_int'] = OwnData.apply(lambda row: row.mov_past * row.log_contributions_FIRE, axis = 1)
 
@@ -95,13 +97,13 @@ OLSmodel = sm.OLS(y,X)
 results_1 = OLSmodel.fit()
 results_1.summary()
 
+
 OwnData['congru_contr_int'] = OwnData.apply(lambda row: row.congruence_dc * row.log_contributions_FIRE, axis = 1)
 
-y, X = dmatrices('sw_p ~ log_contributions_FIRE + congruence_dc + congru_contr_int + bill_complexity + tight', data=OwnData, return_type='dataframe')
+y, X = dmatrices('sw_p ~ congruence_dc + bill_complexity + tight', data=OwnData, return_type='dataframe')
 OLSmodel = sm.OLS(y,X)
 results_2 = OLSmodel.fit()
 results_2.summary()
-
 
 with open('results_0.tex','w') as file:
 	file.write(results_0.summary().as_latex())
@@ -113,5 +115,4 @@ os.replace(filepath + "\\results_1.tex", filepathmain + "\\Tables\\results_1.tex
 
 with open('results_2.tex','w') as file:
 	file.write(results_2.summary().as_latex())
-
 os.replace(filepath + "\\results_2.tex", filepathmain + "\\Tables\\results_2.tex")

@@ -1,0 +1,4 @@
+-e git://github.com/econ-ark/HARK.git@3ba91db642bd0394ef93b414cbd27f98fcdaf56f#egg=econ_ark
+jupyter-client==6.1.12
+numpy==1.21.1
+voila==0.2.10
